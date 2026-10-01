@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SkyCrash - Demo</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #090d1a;
+    color: white;
+}
+
+.header {
+    padding: 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #11182b;
+}
+
+.logo {
+    font-size: 23px;
+    font-weight: bold;
+}
+
+.balance {
+    background: #202a42;
+    padding: 10px 15px;
+    border-radius: 20px;
+    color: #54e38e;
+}
+
+.game {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 15px;
+}
+
+.history {
+    display: flex;
+    gap: 8px;
+    overflow-x: auto;
+    margin-bottom: 12px;
+}
+
+.history span {
+    padding: 7px 11px;
+    border-radius: 15px;
+    background: #252d42;
+    font-size: 13px;
+}
+
+.low {
+    color: #ff6464;
+}
+
+.medium {
+    color: #ffc857;
+}
+
+.high {
+    color: #55e39a;
+}
+
+.board {
+    height: 430px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    background:
+        linear-gradient(rgba(255,255,255,.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.04) 1px, transparent 1px),
+        #10182c;
+    background-size: 45px 45px;
+}
+
+.board::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #ef4444;
+}
+
+.multiplier {
+    position: absolute;
+    top: 42%;
+    width: 100%;
+    text-align: center;
+    font-size: 65px;
+    font-weight: bold;
+    z-index: 5;
+}
+
+.status {
+    position: absolute;
+    top: 15px;
+    width: 100%;
+    text-align: center;
+    color: #9ca3af;
+}
+
+.plane {
+    position: absolute;
+    font-size: 45px;
+    left:
